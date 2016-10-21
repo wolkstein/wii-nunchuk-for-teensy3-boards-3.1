@@ -154,7 +154,7 @@ void loop()
 
 /// EXAMPLES for KEY, JOYSTICK and MOUSE emulation
 
-/// KEY example using hitdetection to move a slideshow with KEY_LEFT or KEY_RIGT
+/// KEY example using beatdetection to move for example a slideshow with KEY_LEFT or KEY_RIGT
 
   if(IS_KEY){
     // detect left right hits
@@ -336,7 +336,7 @@ int simpleLeftRightHitDetection(){
     //Serial.println(RIGHTCOUNT);
     if(RIGHTCOUNT > LEFTCOUNT){
       hit = 1;
-      Serial.println("hit to right side  -->");
+      Serial.println("beat to right side  -->");
     }    
     RIGHTCOUNT = 0;
   }
@@ -348,7 +348,7 @@ int simpleLeftRightHitDetection(){
     //Serial.println(LEFTCOUNT);
     if(LEFTCOUNT > RIGHTCOUNT){
       hit = -1;
-      Serial.println("hit to left side  <--");
+      Serial.println("beat to left side  <--");
     }
     LEFTCOUNT = 0;
   }
