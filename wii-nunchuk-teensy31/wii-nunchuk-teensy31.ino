@@ -5,7 +5,7 @@
 IntervalTimer NuchukTimer;
 Nunchuk nc = Nunchuk();
 
-// vars for left right hitdetection 
+// vars for left right beatdetection 
 unsigned long XACC_LEFT_TIME = 0;
 unsigned long XACC_RIGHT_TIME = 0;
 unsigned int LEFTCOUNT = 0;
@@ -310,7 +310,7 @@ long runningAverageY(int M) {
 }
 
 
-// simple detection of x axis left and right hits
+// simple detection of x axis left and right beats
 // return -1 = left, 0 = nothing, 1 = right
 int simpleLeftRightHitDetection(){
   int hit = 0;
