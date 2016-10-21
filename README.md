@@ -14,7 +14,8 @@ Or second the default setup as mouse keyboard combination with left and right be
 
 In this example the Nunchuk class is included locally. No need to copy the Nunchuck Class to the arduino library's folder.
 
-How this example work:
+# How this example work:
+
 A timer function check and read all of the Nunchuk controller data all 10ms and write them into global volatile variables with the data type used by Nunchuk.h.
 
 In init function we init Nunchk with nc.begin() and start the timer function to read all nunchuk data each 10 ms. Than we calibrate two seconds the Joystick offset X Y for the Poti based Nunchuk Joystik. I noticed that the joystick is not very accurate around the middle position. Than we create an lookup table for this joystick to define an dead-zone. Default set to 5 (int mouseDead = 5;). I called this mouseDead because it is only used by mouse emulation. I noticed that most joystick calibration software from your OS will allow you to define your own dead-zone.
